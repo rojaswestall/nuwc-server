@@ -1,2 +1,2 @@
-# nuwc-server
-Server that handles requests from react app and slack
+# nuworldcup-react
+The world cup website, but as a react app so we can add functionality!
