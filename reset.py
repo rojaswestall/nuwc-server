@@ -25,6 +25,24 @@ db.teams.update_one(
 	{'$set': {'points':0}}
 )
 
+newcountries = ["Cuba", "Portugal", "Argentina", "Russia", "Vatican", "Tanzania", "Ottoman-Empire", "Bhutan", "England"]
+flags = ["cu", "pt", "ar", "ru", "va", "tz", "un", "bt", "gb"]
+abbreviations = ["CUB", "POR", "ARG", "RUS", "VAT", "TZA", "OTT", "BTN", "ENG"]
+i = 0
+
+
+for thing in newcountries:
+	new = {"name": thing,
+		   "flag": flags[i],
+		   "points": 0,
+		   "tournament": "co-ed",
+		   "abb": abbreviations[i]
+	}
+
+	team_id = teams.insert_one(new).inserted_id
+	team_id
+	i = i+1
+
 
 #nigeria = teams.find_one({'name': 'Nigeria'})
 
